@@ -1,8 +1,8 @@
-import React from 'react'
-import Categories from "../../components/categories/categories.component";
+import React from "react";
+import Directory from "../../components/directory/directory.component";
 
 const Home = () => {
-  return <Categories />;
-}
+  return <Directory />;
+};
 
 export default Home;
