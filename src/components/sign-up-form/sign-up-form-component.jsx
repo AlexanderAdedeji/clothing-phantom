@@ -43,7 +43,7 @@ const SignUpForm = () => {
         password
       );
 
-      const userDocRef = await createUserDocumentFromAuth(user, {
+      await createUserDocumentFromAuth(user, {
         displayName,
       });
       resetFormFields();
