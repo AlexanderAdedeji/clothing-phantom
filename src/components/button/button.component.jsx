@@ -1,4 +1,5 @@
 import React from "react";
+import { SpinnerContainer } from "../spinner/spinner.styles.jsx";
 
 import "./button.styles.scss";
 
@@ -7,13 +8,14 @@ const BUTTON_TYPE_CLASSES = {
   inverted: "inverted",
 };
 
-const Button = ({ children, buttonType, ...btnAttributes }) => {
+const Button = ({ children, buttonType, isLoading, ...btnAttributes }) => {
   return (
     <button
+      disabled={isLoading}
       className={`button-container ${BUTTON_TYPE_CLASSES[buttonType]}`}
       {...btnAttributes}
     >
-      {children}
+      {isLoading ? <SpinnerContainer /> : children}
     </button>
   );
 };
