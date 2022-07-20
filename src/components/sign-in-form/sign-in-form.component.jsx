@@ -30,6 +30,7 @@ const SignInForm = () => {
   };
 
   const signInWithGoogle = async () => {
+    debugger
     dispatch(googleSignInStart());
   };
   const handleSubmit = async (event) => {
