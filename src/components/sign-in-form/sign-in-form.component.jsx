@@ -6,11 +6,13 @@ import {useDispatch} from 'react-redux'
 import {
   googleSignInStart,
   emailSignInStart,
+  checkUserSession,
 } from '../../store/user/user.action';
 
 import FormInput from "../form-input/form-input.component";
 import Button from "../button/button.component";
 import "./sign-in-form.styles.scss";
+import { getCurrentUser } from "../../utils/firebase/firebase.utils";
 
 
 const defaultFormFields = {
@@ -30,8 +32,7 @@ const SignInForm = () => {
   };
 
   const signInWithGoogle = async () => {
-    debugger
-    dispatch(googleSignInStart());
+     dispatch(googleSignInStart());
   };
   const handleSubmit = async (event) => {
     event.preventDefault();

@@ -6,12 +6,7 @@ import storage from "redux-persist/lib/storage";
 import { rootReducer } from "./root-reducer";
 import createSagaMiddleware from "@redux-saga/core";
 import { rootSaga } from "./root-saga";
-// const loggerMiddleware =(store)=> (next) =>(action)=>{
-//     if(!action.type){
-//         return next(action)
-//     }
-//     next(action)
-// }
+
 
 const persistConfig = {
   key: "root",

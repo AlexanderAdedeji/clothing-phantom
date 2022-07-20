@@ -1,4 +1,5 @@
 import { takeLatest, put, all, call } from 'redux-saga/effects';
+import { useNavigate } from 'react-router-dom';
 
 import { USER_ACTION_TYPES } from './user.types';
 
@@ -20,6 +21,9 @@ import {
   signOutUser,
 } from '../../utils/firebase/firebase.utils';
 
+
+
+
 export function* getSnapshotFromUserAuth(userAuth, additionalDetails) {
   try {
     const userSnapshot = yield call(
@@ -28,6 +32,10 @@ export function* getSnapshotFromUserAuth(userAuth, additionalDetails) {
       additionalDetails
     );
     yield put(signInSuccess({ id: userSnapshot.id, ...userSnapshot.data() }));
+    if(getCurrentUser){
+      console.log('getting current user')
+
+    }
   } catch (error) {
     yield put(signInFailed(error));
   }

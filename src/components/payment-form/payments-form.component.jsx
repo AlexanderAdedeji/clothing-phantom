@@ -55,9 +55,13 @@ const PaymentForm = () => {
         <h2>Credit Card Payment: </h2>
         <CardElement />
 
-        <Button disabled={loading} isLoading={loading} buttonType={"inverted"}>
+
+<div className="pay-now-btn-container">
+<Button disabled={loading} isLoading={loading} buttonType={"inverted"}>
           Pay Now
         </Button>
+</div>
+
       </form>
     </div>
   );
