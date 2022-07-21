@@ -2,8 +2,8 @@ Clothing Phantom is an Ecommerce website that sells clothes
 
 The project is built with the following technologies:
 1. React Js
-2.Redux Saga
-3.Scss
+2. Redux Saga
+3. Scss
 4. Styled Components
 5. Firebase
 6. Stripe
